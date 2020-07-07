@@ -1,67 +1,68 @@
-*{
+* {
   margin: 0;
   padding: 0;
   text-decoration: none;
   font-family: "montserrat";
 }
-body{
+body {
   background: #333;
 }
-.middle{
+.middle {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
-.card{
+.card {
   cursor: pointer;
   width: 340px;
   height: 480px;
 }
-.front,.back{
+.front,
+.back {
   width: 100%;
   height: 100%;
   overflow: hidden;
   backface-visibility: hidden;
   position: absolute;
-  transition: transform .6s linear;
+  transition: transform 0.6s linear;
 }
-.front img{
+.front img {
   height: 100%;
 }
-.front{
+.front {
   transform: perspective(600px) rotateY(0deg);
 }
-.back{
+.back {
   background: #f1f1f1;
   transform: perspective(600px) rotateY(180deg);
 }
-.back-content{
-  color: #5B2C6F;
+.back-content {
+  color: #5b2c6f;
   text-align: center;
   width: 100%;
 }
-.sm{
+.sm {
   margin: 20px 0;
 }
-.sm a{
+.sm a {
   display: inline-flex;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   justify-content: center;
   align-items: center;
-  color: #A569BD;
-  font-size: 18px;
+  color: #a569bd;
+  font-size: 30px;
   transition: 0.4s;
-  border-radius: 50%
+  border-radius: 50%;
 }
-.sm a:hover{
-  background: #5B2C6F;
+.sm a:hover {
+  background: #5b2c6f;
   color: white;
 }
-.card:hover > .front{
+.card:hover > .front {
   transform: perspective(600px) rotateY(-180deg);
 }
-.card:hover > .back{
+.card:hover > .back {
   transform: perspective(600px) rotateY(0deg);
 }
